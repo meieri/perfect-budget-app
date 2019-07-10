@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E022D6209100C91380 /* AppDelegate.swift */; };
+		FF2F22E322D6209100C91380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E222D6209100C91380 /* ViewController.swift */; };
+		FF2F22E622D6209100C91380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E422D6209100C91380 /* Main.storyboard */; };
+		FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E722D6209200C91380 /* Assets.xcassets */; };
+		FF2F22EB22D6209200C91380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */; };
+		FF2F22F622D6209200C91380 /* Perfect_BudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22F522D6209200C91380 /* Perfect_BudgetTests.swift */; };
+		FF2F230122D6209200C91380 /* Perfect_BudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F230022D6209200C91380 /* Perfect_BudgetUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF2F22F222D6209200C91380 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF2F22D522D6209100C91380 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF2F22DC22D6209100C91380;
+			remoteInfo = "Perfect Budget";
+		};
+		FF2F22FD22D6209200C91380 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF2F22D522D6209100C91380 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF2F22DC22D6209100C91380;
+			remoteInfo = "Perfect Budget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF2F22DD22D6209100C91380 /* Perfect Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2F22E022D6209100C91380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF2F22E222D6209100C91380 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF2F22E522D6209100C91380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF2F22E722D6209200C91380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF2F22EA22D6209200C91380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF2F22EC22D6209200C91380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2F22F122D6209200C91380 /* Perfect BudgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Perfect BudgetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2F22F522D6209200C91380 /* Perfect_BudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfect_BudgetTests.swift; sourceTree = "<group>"; };
+		FF2F22F722D6209200C91380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2F22FC22D6209200C91380 /* Perfect BudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Perfect BudgetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2F230022D6209200C91380 /* Perfect_BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfect_BudgetUITests.swift; sourceTree = "<group>"; };
+		FF2F230222D6209200C91380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF2F22DA22D6209100C91380 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2F22EE22D6209200C91380 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2F22F922D6209200C91380 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF2F22D422D6209100C91380 = {
+			isa = PBXGroup;
+			children = (
+				FF2F22DF22D6209100C91380 /* Perfect Budget */,
+				FF2F22F422D6209200C91380 /* Perfect BudgetTests */,
+				FF2F22FF22D6209200C91380 /* Perfect BudgetUITests */,
+				FF2F22DE22D6209100C91380 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF2F22DE22D6209100C91380 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F22DD22D6209100C91380 /* Perfect Budget.app */,
+				FF2F22F122D6209200C91380 /* Perfect BudgetTests.xctest */,
+				FF2F22FC22D6209200C91380 /* Perfect BudgetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF2F22DF22D6209100C91380 /* Perfect Budget */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F22E022D6209100C91380 /* AppDelegate.swift */,
+				FF2F22E222D6209100C91380 /* ViewController.swift */,
+				FF2F22E422D6209100C91380 /* Main.storyboard */,
+				FF2F22E722D6209200C91380 /* Assets.xcassets */,
+				FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */,
+				FF2F22EC22D6209200C91380 /* Info.plist */,
+			);
+			path = "Perfect Budget";
+			sourceTree = "<group>";
+		};
+		FF2F22F422D6209200C91380 /* Perfect BudgetTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F22F522D6209200C91380 /* Perfect_BudgetTests.swift */,
+				FF2F22F722D6209200C91380 /* Info.plist */,
+			);
+			path = "Perfect BudgetTests";
+			sourceTree = "<group>";
+		};
+		FF2F22FF22D6209200C91380 /* Perfect BudgetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F230022D6209200C91380 /* Perfect_BudgetUITests.swift */,
+				FF2F230222D6209200C91380 /* Info.plist */,
+			);
+			path = "Perfect BudgetUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF2F22DC22D6209100C91380 /* Perfect Budget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF2F230522D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect Budget" */;
+			buildPhases = (
+				FF2F22D922D6209100C91380 /* Sources */,
+				FF2F22DA22D6209100C91380 /* Frameworks */,
+				FF2F22DB22D6209100C91380 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Perfect Budget";
+			productName = "Perfect Budget";
+			productReference = FF2F22DD22D6209100C91380 /* Perfect Budget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF2F22F022D6209200C91380 /* Perfect BudgetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF2F230822D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect BudgetTests" */;
+			buildPhases = (
+				FF2F22ED22D6209200C91380 /* Sources */,
+				FF2F22EE22D6209200C91380 /* Frameworks */,
+				FF2F22EF22D6209200C91380 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF2F22F322D6209200C91380 /* PBXTargetDependency */,
+			);
+			name = "Perfect BudgetTests";
+			productName = "Perfect BudgetTests";
+			productReference = FF2F22F122D6209200C91380 /* Perfect BudgetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF2F22FB22D6209200C91380 /* Perfect BudgetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF2F230B22D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect BudgetUITests" */;
+			buildPhases = (
+				FF2F22F822D6209200C91380 /* Sources */,
+				FF2F22F922D6209200C91380 /* Frameworks */,
+				FF2F22FA22D6209200C91380 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF2F22FE22D6209200C91380 /* PBXTargetDependency */,
+			);
+			name = "Perfect BudgetUITests";
+			productName = "Perfect BudgetUITests";
+			productReference = FF2F22FC22D6209200C91380 /* Perfect BudgetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF2F22D522D6209100C91380 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Isaak Meier";
+				TargetAttributes = {
+					FF2F22DC22D6209100C91380 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					FF2F22F022D6209200C91380 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FF2F22DC22D6209100C91380;
+					};
+					FF2F22FB22D6209200C91380 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FF2F22DC22D6209100C91380;
+					};
+				};
+			};
+			buildConfigurationList = FF2F22D822D6209100C91380 /* Build configuration list for PBXProject "Perfect Budget" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF2F22D422D6209100C91380;
+			productRefGroup = FF2F22DE22D6209100C91380 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF2F22DC22D6209100C91380 /* Perfect Budget */,
+				FF2F22F022D6209200C91380 /* Perfect BudgetTests */,
+				FF2F22FB22D6209200C91380 /* Perfect BudgetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF2F22DB22D6209100C91380 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2F22EB22D6209200C91380 /* LaunchScreen.storyboard in Resources */,
+				FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */,
+				FF2F22E622D6209100C91380 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2F22EF22D6209200C91380 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2F22FA22D6209200C91380 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF2F22D922D6209100C91380 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2F22E322D6209100C91380 /* ViewController.swift in Sources */,
+				FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2F22ED22D6209200C91380 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2F22F622D6209200C91380 /* Perfect_BudgetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2F22F822D6209200C91380 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2F230122D6209200C91380 /* Perfect_BudgetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF2F22F322D6209200C91380 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF2F22DC22D6209100C91380 /* Perfect Budget */;
+			targetProxy = FF2F22F222D6209200C91380 /* PBXContainerItemProxy */;
+		};
+		FF2F22FE22D6209200C91380 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF2F22DC22D6209100C91380 /* Perfect Budget */;
+			targetProxy = FF2F22FD22D6209200C91380 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF2F22E422D6209100C91380 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF2F22E522D6209100C91380 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF2F22EA22D6209200C91380 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF2F230322D6209200C91380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF2F230422D6209200C91380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF2F230622D6209200C91380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Perfect Budget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-Budget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF2F230722D6209200C91380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Perfect Budget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-Budget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF2F230922D6209200C91380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Perfect BudgetTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-BudgetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Perfect Budget.app/Perfect Budget";
+			};
+			name = Debug;
+		};
+		FF2F230A22D6209200C91380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Perfect BudgetTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-BudgetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Perfect Budget.app/Perfect Budget";
+			};
+			name = Release;
+		};
+		FF2F230C22D6209200C91380 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Perfect BudgetUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-BudgetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Perfect Budget";
+			};
+			name = Debug;
+		};
+		FF2F230D22D6209200C91380 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Perfect BudgetUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-BudgetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Perfect Budget";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF2F22D822D6209100C91380 /* Build configuration list for PBXProject "Perfect Budget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2F230322D6209200C91380 /* Debug */,
+				FF2F230422D6209200C91380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF2F230522D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect Budget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2F230622D6209200C91380 /* Debug */,
+				FF2F230722D6209200C91380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF2F230822D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect BudgetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2F230922D6209200C91380 /* Debug */,
+				FF2F230A22D6209200C91380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF2F230B22D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect BudgetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2F230C22D6209200C91380 /* Debug */,
+				FF2F230D22D6209200C91380 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF2F22D522D6209100C91380 /* Project object */;
+}
