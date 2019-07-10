@@ -6,6 +6,7 @@ target 'Perfect Budget' do
   use_frameworks!
 
   # Pods for Perfect Budget
+  pod 'Anchorage'
 
   target 'Perfect BudgetTests' do
     inherit! :search_paths

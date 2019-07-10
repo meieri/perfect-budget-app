@@ -3,19 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF24671B22D6359400EEDD88 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = FF24671A22D6359400EEDD88 /* Fonts */; };
-		FF24671D22D63C7900EEDD88 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = FF24671C22D63C7800EEDD88 /* Pods */; };
+		0494438CC7DA547801F331C6 /* Pods_Perfect_Budget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C0C0913FD8130FE5480E06 /* Pods_Perfect_Budget.framework */; };
+		79E945DC5906AFB971645F4C /* Pods_Perfect_BudgetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693550A01C2D017363713FE1 /* Pods_Perfect_BudgetTests.framework */; };
+		FEC41CDFF3C6DF3206EE3EA6 /* Pods_Perfect_BudgetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FF2B1DF69D64A67E430E36 /* Pods_Perfect_BudgetUITests.framework */; };
 		FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E022D6209100C91380 /* AppDelegate.swift */; };
 		FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E222D6209100C91380 /* DayViewController.swift */; };
-		FF2F22E622D6209100C91380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E422D6209100C91380 /* Main.storyboard */; };
 		FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E722D6209200C91380 /* Assets.xcassets */; };
 		FF2F22EB22D6209200C91380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */; };
 		FF2F22F622D6209200C91380 /* Perfect_BudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22F522D6209200C91380 /* Perfect_BudgetTests.swift */; };
 		FF2F230122D6209200C91380 /* Perfect_BudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F230022D6209200C91380 /* Perfect_BudgetUITests.swift */; };
+		FF914A5B22D666E400D1F949 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF914A5A22D666E400D1F949 /* Montserrat-Black.ttf */; };
+		FF914A5D22D6671C00D1F949 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF914A5C22D6671C00D1F949 /* Montserrat-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FF24671A22D6359400EEDD88 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		FF24671C22D63C7800EEDD88 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		21C0C0913FD8130FE5480E06 /* Pods_Perfect_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6D5EE3ED110915AB68E548 /* Pods-Perfect BudgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetUITests.debug.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetUITests/Pods-Perfect BudgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		693550A01C2D017363713FE1 /* Pods_Perfect_BudgetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_BudgetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E6CE9B2C8710054394D2083 /* Pods-Perfect Budget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect Budget.release.xcconfig"; path = "Target Support Files/Pods-Perfect Budget/Pods-Perfect Budget.release.xcconfig"; sourceTree = "<group>"; };
+		6F0D3C6C3F64E78A020634C7 /* Pods-Perfect BudgetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetTests.release.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetTests/Pods-Perfect BudgetTests.release.xcconfig"; sourceTree = "<group>"; };
+		90FF2B1DF69D64A67E430E36 /* Pods_Perfect_BudgetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_BudgetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C0CD9805D1FDF00CF28130 /* Pods-Perfect Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect Budget.debug.xcconfig"; path = "Target Support Files/Pods-Perfect Budget/Pods-Perfect Budget.debug.xcconfig"; sourceTree = "<group>"; };
+		C420ACB637E7BB920E4531A1 /* Pods-Perfect BudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetTests.debug.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetTests/Pods-Perfect BudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC38E46FBCBC396E20C18EED /* Pods-Perfect BudgetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetUITests.release.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetUITests/Pods-Perfect BudgetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF2F22DD22D6209100C91380 /* Perfect Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F22E022D6209100C91380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2F22E222D6209100C91380 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
-		FF2F22E522D6209100C91380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF2F22E722D6209200C91380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2F22EA22D6209200C91380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2F22EC22D6209200C91380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,7 +59,8 @@
 		FF2F22FC22D6209200C91380 /* Perfect BudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Perfect BudgetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F230022D6209200C91380 /* Perfect_BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfect_BudgetUITests.swift; sourceTree = "<group>"; };
 		FF2F230222D6209200C91380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFC6C5C922D63E56000EE44F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = Fonts/Podfile; sourceTree = "<group>"; };
+		FF914A5A22D666E400D1F949 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "Montserrat/Montserrat-Black.ttf"; sourceTree = SOURCE_ROOT; };
+		FF914A5C22D6671C00D1F949 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "Montserrat/Montserrat-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0494438CC7DA547801F331C6 /* Pods_Perfect_Budget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E945DC5906AFB971645F4C /* Pods_Perfect_BudgetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,22 +84,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC41CDFF3C6DF3206EE3EA6 /* Pods_Perfect_BudgetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34D61F65CE8B338ABB199009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21C0C0913FD8130FE5480E06 /* Pods_Perfect_Budget.framework */,
+				693550A01C2D017363713FE1 /* Pods_Perfect_BudgetTests.framework */,
+				90FF2B1DF69D64A67E430E36 /* Pods_Perfect_BudgetUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		417C44A9BE5902F54B59353A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0C0CD9805D1FDF00CF28130 /* Pods-Perfect Budget.debug.xcconfig */,
+				6E6CE9B2C8710054394D2083 /* Pods-Perfect Budget.release.xcconfig */,
+				C420ACB637E7BB920E4531A1 /* Pods-Perfect BudgetTests.debug.xcconfig */,
+				6F0D3C6C3F64E78A020634C7 /* Pods-Perfect BudgetTests.release.xcconfig */,
+				3F6D5EE3ED110915AB68E548 /* Pods-Perfect BudgetUITests.debug.xcconfig */,
+				FC38E46FBCBC396E20C18EED /* Pods-Perfect BudgetUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF2F22D422D6209100C91380 = {
 			isa = PBXGroup;
 			children = (
+				FF914A5922D6667700D1F949 /* Fonts */,
 				FF2F22DF22D6209100C91380 /* Perfect Budget */,
 				FF2F22F422D6209200C91380 /* Perfect BudgetTests */,
 				FF2F22FF22D6209200C91380 /* Perfect BudgetUITests */,
 				FF2F22DE22D6209100C91380 /* Products */,
-				FF24671C22D63C7800EEDD88 /* Pods */,
-				FFC6C5C922D63E56000EE44F /* Podfile */,
-				FF24671A22D6359400EEDD88 /* Fonts */,
+				417C44A9BE5902F54B59353A /* Pods */,
+				34D61F65CE8B338ABB199009 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +142,6 @@
 			children = (
 				FF2F22E022D6209100C91380 /* AppDelegate.swift */,
 				FF2F22E222D6209100C91380 /* DayViewController.swift */,
-				FF2F22E422D6209100C91380 /* Main.storyboard */,
 				FF2F22E722D6209200C91380 /* Assets.xcassets */,
 				FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */,
 				FF2F22EC22D6209200C91380 /* Info.plist */,
@@ -133,6 +167,15 @@
 			path = "Perfect BudgetUITests";
 			sourceTree = "<group>";
 		};
+		FF914A5922D6667700D1F949 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF914A5C22D6671C00D1F949 /* Montserrat-Bold.ttf */,
+				FF914A5A22D666E400D1F949 /* Montserrat-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF2F230522D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect Budget" */;
 			buildPhases = (
+				DD06E3C937523F527620474C /* [CP] Check Pods Manifest.lock */,
 				FF2F22D922D6209100C91380 /* Sources */,
 				FF2F22DA22D6209100C91380 /* Frameworks */,
 				FF2F22DB22D6209100C91380 /* Resources */,
+				B240233674A355B7DC4FFF84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +202,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF2F230822D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect BudgetTests" */;
 			buildPhases = (
+				05E549D60242E22135239F19 /* [CP] Check Pods Manifest.lock */,
 				FF2F22ED22D6209200C91380 /* Sources */,
 				FF2F22EE22D6209200C91380 /* Frameworks */,
 				FF2F22EF22D6209200C91380 /* Resources */,
@@ -175,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF2F230B22D6209200C91380 /* Build configuration list for PBXNativeTarget "Perfect BudgetUITests" */;
 			buildPhases = (
+				693423025C29138DC2AB0A1A /* [CP] Check Pods Manifest.lock */,
 				FF2F22F822D6209200C91380 /* Sources */,
 				FF2F22F922D6209200C91380 /* Frameworks */,
 				FF2F22FA22D6209200C91380 /* Resources */,
@@ -237,11 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF914A5D22D6671C00D1F949 /* Montserrat-Bold.ttf in Resources */,
 				FF2F22EB22D6209200C91380 /* LaunchScreen.storyboard in Resources */,
+				FF914A5B22D666E400D1F949 /* Montserrat-Black.ttf in Resources */,
 				FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */,
-				FF2F22E622D6209100C91380 /* Main.storyboard in Resources */,
-				FF24671D22D63C7900EEDD88 /* Pods in Resources */,
-				FF24671B22D6359400EEDD88 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +306,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05E549D60242E22135239F19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Perfect BudgetTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		693423025C29138DC2AB0A1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Perfect BudgetUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B240233674A355B7DC4FFF84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Perfect Budget/Pods-Perfect Budget-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Perfect Budget/Pods-Perfect Budget-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Perfect Budget/Pods-Perfect Budget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD06E3C937523F527620474C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Perfect Budget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF2F22D922D6209100C91380 /* Sources */ = {
@@ -303,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FF2F22E422D6209100C91380 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF2F22E522D6209100C91380 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,6 +564,7 @@
 		};
 		FF2F230622D6209200C91380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C0CD9805D1FDF00CF28130 /* Pods-Perfect Budget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,12 +576,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-Budget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		FF2F230722D6209200C91380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6CE9B2C8710054394D2083 /* Pods-Perfect Budget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,12 +594,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "meier.Perfect-Budget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		FF2F230922D6209200C91380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C420ACB637E7BB920E4531A1 /* Pods-Perfect BudgetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +621,7 @@
 		};
 		FF2F230A22D6209200C91380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0D3C6C3F64E78A020634C7 /* Pods-Perfect BudgetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +642,7 @@
 		};
 		FF2F230C22D6209200C91380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F6D5EE3ED110915AB68E548 /* Pods-Perfect BudgetUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +662,7 @@
 		};
 		FF2F230D22D6209200C91380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC38E46FBCBC396E20C18EED /* Pods-Perfect BudgetUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
