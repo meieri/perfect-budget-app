@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF24671B22D6359400EEDD88 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = FF24671A22D6359400EEDD88 /* Fonts */; };
+		FF24671D22D63C7900EEDD88 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = FF24671C22D63C7800EEDD88 /* Pods */; };
 		FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E022D6209100C91380 /* AppDelegate.swift */; };
 		FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E222D6209100C91380 /* DayViewController.swift */; };
 		FF2F22E622D6209100C91380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E422D6209100C91380 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		FF24671A22D6359400EEDD88 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		FF24671C22D63C7800EEDD88 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		FF2F22DD22D6209100C91380 /* Perfect Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F22E022D6209100C91380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2F22E222D6209100C91380 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		FF2F22FC22D6209200C91380 /* Perfect BudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Perfect BudgetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F230022D6209200C91380 /* Perfect_BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfect_BudgetUITests.swift; sourceTree = "<group>"; };
 		FF2F230222D6209200C91380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC6C5C922D63E56000EE44F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = Fonts/Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				FF2F22F422D6209200C91380 /* Perfect BudgetTests */,
 				FF2F22FF22D6209200C91380 /* Perfect BudgetUITests */,
 				FF2F22DE22D6209100C91380 /* Products */,
+				FF24671C22D63C7800EEDD88 /* Pods */,
+				FFC6C5C922D63E56000EE44F /* Podfile */,
 				FF24671A22D6359400EEDD88 /* Fonts */,
 			);
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				FF2F22EB22D6209200C91380 /* LaunchScreen.storyboard in Resources */,
 				FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */,
 				FF2F22E622D6209100C91380 /* Main.storyboard in Resources */,
+				FF24671D22D63C7900EEDD88 /* Pods in Resources */,
 				FF24671B22D6359400EEDD88 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
