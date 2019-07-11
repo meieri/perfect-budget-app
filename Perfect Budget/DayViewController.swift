@@ -16,7 +16,6 @@ class DayViewController: UIViewController {
 
     init() {
         self.dayName = UILabel()
-        
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -24,12 +23,8 @@ class DayViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupConstraints() {
-        dayName.centerXAnchor == self.centerAnchors.first
-        dayName.topAnchor == self.verticalAnchors.first / 4
-    }
-
     // Quick function to get name of day of week from date
+    // Move this to the model, make it build on init? Just make the model store a date that updates daily haha
     func getDayOfWeek() -> String {
         let date = Date()
         let dateFormatter = DateFormatter()
@@ -40,27 +35,36 @@ class DayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initViews()
-        self.setupConstraints()
+        configureViews()
     }
+}
 
-    func initViews() {
-        dayName.textColor = .black
+private extension DayViewController {
+    func configureViews() {
+
+        // View Heirarchy
         // Need to add label as subview in order for it to be drawn
         self.view.addSubview(dayName)
+
+        // Style
         self.view.backgroundColor = .white
-
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Front names: \(names)")
-        }
-
-        guard let customFont = UIFont(name: "Montserrat-Black", size: UIFont.labelFontSize) else {
+        dayName.textColor = .black
+        guard let customFont = UIFont(name: "Montserrat-Bold", size: 20) else {
             fatalError("""
             Failed to load the "Montserrat-Black" font.
             Make sure the font file is included in the project and the font name is correct
             """)
         }
+
+        // Layout
+        // Center the label in the middle of the screen
+        dayName.centerXAnchor == self.view.centerXAnchor
+        // dayName.centerAnchors == self.centerAnchors.first
+
+        // dayName.topAnchor == self.verticalAnchors.first / 4
+        // Move the label a nice distance from the top
+        dayName.topAnchor == self.view.bottomAnchor / 10
+
         dayName.font = UIFontMetrics.default.scaledFont(for: customFont)
         dayName.adjustsFontForContentSizeCategory = true
         dayName.text = getDayOfWeek()
