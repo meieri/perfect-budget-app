@@ -13,6 +13,7 @@ import Anchorage
 class NameAndProgessView: UIView {
 
     private let dayName = UILabel()
+    private let dailySpending = UILabel()
     private let addCash = UIButton()
     private let progessBar = ProgessBarView()
 
@@ -43,26 +44,41 @@ private extension NameAndProgessView {
         // self.addSubview(addCash)
         self.addSubview(dayName)
         self.addSubview(progessBar)
+        self.addSubview(dailySpending)
 
         // Style
         dayName.textColor = .black
-        guard let customFont = UIFont(name: "Montserrat-Bold", size: 20) else {
+        guard let customFont1 = UIFont(name: "Montserrat-Bold", size: 20) else {
             fatalError("""
             Failed to load the "Montserrat-Black" font.
             Make sure the font file is included in the project and the font name is correct
             """)
         }
-        dayName.font = UIFontMetrics.default.scaledFont(for: customFont)
+        guard let customFont2 = UIFont(name: "Montserrat-Bold", size: 16) else {
+            fatalError("""
+            Failed to load the "Montserrat-Black" font.
+            Make sure the font file is included in the project and the font name is correct
+            """)
+        }
+        dayName.font = UIFontMetrics.default.scaledFont(for: customFont1)
+        dailySpending.font = UIFontMetrics.default.scaledFont(for: customFont2)
         dayName.adjustsFontForContentSizeCategory = true
+        dailySpending.adjustsFontForContentSizeCategory = true
         dayName.text = getDayOfWeek()
+        dailySpending.text = "Daily Spending"
 
         // Layout
         // Center in the middle of the screen
         dayName.centerXAnchor == self.centerXAnchor
         progessBar.centerXAnchor == self.centerXAnchor
         // Move a nice distance from the top
-        dayName.topAnchor == self.bottomAnchor / 10
-        progessBar.topAnchor == self.bottomAnchor / 5
+        dayName.topAnchor == self.topAnchor + 50
+        progessBar.topAnchor == dayName.bottomAnchor + 50
+        progessBar.widthAnchor == self.widthAnchor - 20
+        progessBar.heightAnchor == self.heightAnchor / 6
+
+        dailySpending.leadingAnchor == self.leadingAnchor + 10
+        dailySpending.bottomAnchor == progessBar.topAnchor - 10
 
     }
 }

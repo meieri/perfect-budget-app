@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Anchorage
+import QuartzCore
 
 class ProgessBarView: UIView {
 
@@ -25,19 +26,13 @@ class ProgessBarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // Override the draw function in this view in order to draw the progress bar with rounded corners
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-
-        let clipPath = UIBezierPath(roundedRect: rect, cornerRadius: 6.0).cgPath
-
-        let ctx = UIGraphicsGetCurrentContext()!
-        ctx.addPath(clipPath)
-        ctx.setFillColor(UIColor.red.cgColor)
-
-        ctx.closePath()
-        ctx.fillPath()
-    }
+    //override func layoutSubviews() {
+    //    super.layoutSubviews()
+    //    subviews.forEach { subview in
+    //        subview.layer.masksToBounds = true
+    //        subview.layer.cornerRadius = 8.0
+    //    }
+    //}
 }
 
 private extension ProgessBarView {
@@ -47,10 +42,14 @@ private extension ProgessBarView {
         self.addSubview(progessBar)
 
         // Style -- handled (partially) by the override of draw function
-        progessBar.setProgress(Float(currentSpending / maxSpending), animated: true)
+        progessBar.setProgress( Float(currentSpending) / Float(maxSpending), animated: true)
+        progessBar.layer.cornerRadius = 8.0
+        progessBar.clipsToBounds = true
 
         // Layout
         // Sets them to be the same size, the size of this is handled in NameAndProgessView
-        progessBar.sizeAnchors == self.sizeAnchors
+        //self.
+        progessBar.edgeAnchors == self.edgeAnchors
+
     }
 }
