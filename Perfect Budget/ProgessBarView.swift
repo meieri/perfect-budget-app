@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import Anchorage
-import QuartzCore
 
 class ProgessBarView: UIView {
 
@@ -25,14 +24,6 @@ class ProgessBarView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    //override func layoutSubviews() {
-    //    super.layoutSubviews()
-    //    subviews.forEach { subview in
-    //        subview.layer.masksToBounds = true
-    //        subview.layer.cornerRadius = 8.0
-    //    }
-    //}
 }
 
 private extension ProgessBarView {
