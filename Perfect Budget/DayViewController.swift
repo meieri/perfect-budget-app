@@ -12,6 +12,7 @@ import Anchorage
 class DayViewController: UIViewController {
 
     private let nameProgessView = NameAndProgessView()
+    private let expensesView = ExpensesView()
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -34,6 +35,7 @@ private extension DayViewController {
 
         // View Hierarchy
         self.view.addSubview(nameProgessView)
+        self.view.addSubview(expensesView.view)
 
         // Style
         self.view.backgroundColor = .white
@@ -43,5 +45,10 @@ private extension DayViewController {
         nameProgessView.topAnchor == self.view.topAnchor
         nameProgessView.horizontalAnchors == self.view.horizontalAnchors
         nameProgessView.heightAnchor == self.view.heightAnchor / 3.0
+        // Make the expensesView the rest of the screen
+        expensesView.view.topAnchor == nameProgessView.bottomAnchor
+        expensesView.view.bottomAnchor == self.view.bottomAnchor
+        expensesView.view.leadingAnchor == self.view.leadingAnchor
+        expensesView.view.trailingAnchor == self.view.trailingAnchor
     }
 }

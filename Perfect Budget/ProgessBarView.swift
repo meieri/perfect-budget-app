@@ -43,16 +43,30 @@ private extension ProgessBarView {
 
         // View Heirarchy
         self.addSubview(progessBar)
+        self.addSubview(currSpendLabel)
+        self.addSubview(maxSpendLabel)
 
-        // Style -- handled (partially) by the override of draw function
+        // Style -- rounded corners for the progess bar (among other things) handled by the configureTrack function
         progessBar.setProgress( Float(currentSpending) / Float(maxSpending), animated: true)
         configureTrack(height: currentHeight)
+        guard let customFont = UIFont(name: "Montserrat-Bold", size: 16) else {
+            fatalError("""
+            Failed to load the "Montserrat-Black" font.
+            Make sure the font file is included in the project and the font name is correct
+            """)
+        }
+
+        currSpendLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        maxSpendLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        currSpendLabel.adjustsFontForContentSizeCategory = true
+        maxSpendLabel.adjustsFontForContentSizeCategory = true
+        currSpendLabel.text = "$" + String(currentSpending)
+        maxSpendLabel.text = "$" + String(maxSpending)
 
         // Layout
         // Sets them to be the same size, the size of this is handled in NameAndProgessView
         //self.
         progessBar.edgeAnchors == self.edgeAnchors
-
     }
 
     func configureTrack(height: CGFloat) {
