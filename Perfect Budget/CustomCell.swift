@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Anchorage
 
 class CustomCell: UITableViewCell {
 
@@ -38,14 +39,22 @@ private extension CustomCell {
         customView.addSubview(amount)
 
         // Style
-        customView.backgroundColor = UIColor.red
+        customView.backgroundColor = 
         customView.layer.borderColor = UIColor.black.cgColor
         customView.layer.borderWidth = 1
         customView.layer.cornerRadius = 16
         customView.clipsToBounds = true
-        // self.expenseTable.addSubview(cell)
 
         // Layout
-        // customView.leadingAnchor == self.view.leadingAnchor
+        reason.leadingAnchor == customView.leadingAnchor + 10
+        reason.centerYAnchor == customView.centerYAnchor
+
+        reason.trailingAnchor == amount.leadingAnchor
+
+        amount.trailingAnchor == customView.trailingAnchor - 10
+        amount.centerYAnchor == customView.centerYAnchor
+
+        let insets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        customView.edgeAnchors == self.edgeAnchors + insets
     }
 }

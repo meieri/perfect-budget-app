@@ -47,10 +47,7 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomCell
-
-        // cell.textLabel!.text = "\(model.getExpenses()[indexPath.section].reason)"
         cell.setReasonandAmount(reason: model.getExpenses()[indexPath.section].reason,  amount: model.getExpenses()[indexPath.section].amount)
-
         return cell
     }
 

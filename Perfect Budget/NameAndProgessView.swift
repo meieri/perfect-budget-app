@@ -48,12 +48,6 @@ private extension NameAndProgessView {
 
         // Style
         dayName.textColor = .black
-        guard let customFont1 = UIFont(name: "Montserrat-Bold", size: 20) else {
-            fatalError("""
-            Failed to load the "Montserrat-Black" font.
-            Make sure the font file is included in the project and the font name is correct
-            """)
-        }
         guard let customFont2 = UIFont(name: "Montserrat-Bold", size: 16) else {
             fatalError("""
             Failed to load the "Montserrat-Black" font.

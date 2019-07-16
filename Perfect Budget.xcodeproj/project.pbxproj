@@ -10,6 +10,7 @@
 		0494438CC7DA547801F331C6 /* Pods_Perfect_Budget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C0C0913FD8130FE5480E06 /* Pods_Perfect_Budget.framework */; };
 		79E945DC5906AFB971645F4C /* Pods_Perfect_BudgetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693550A01C2D017363713FE1 /* Pods_Perfect_BudgetTests.framework */; };
 		FEC41CDFF3C6DF3206EE3EA6 /* Pods_Perfect_BudgetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FF2B1DF69D64A67E430E36 /* Pods_Perfect_BudgetUITests.framework */; };
+		FF015EF322DE1D730024D478 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF015EF122DE1D6C0024D478 /* Constants.swift */; };
 		FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E022D6209100C91380 /* AppDelegate.swift */; };
 		FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E222D6209100C91380 /* DayViewController.swift */; };
 		FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E722D6209200C91380 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		A0C0CD9805D1FDF00CF28130 /* Pods-Perfect Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect Budget.debug.xcconfig"; path = "Target Support Files/Pods-Perfect Budget/Pods-Perfect Budget.debug.xcconfig"; sourceTree = "<group>"; };
 		C420ACB637E7BB920E4531A1 /* Pods-Perfect BudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetTests.debug.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetTests/Pods-Perfect BudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC38E46FBCBC396E20C18EED /* Pods-Perfect BudgetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetUITests.release.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetUITests/Pods-Perfect BudgetUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FF015EF122DE1D6C0024D478 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF2F22DD22D6209100C91380 /* Perfect Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F22E022D6209100C91380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2F22E222D6209100C91380 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -124,9 +126,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FF015EF422DE1D7C0024D478 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FF015EF122DE1D6C0024D478 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		FF2F22D422D6209100C91380 = {
 			isa = PBXGroup;
 			children = (
+				FF015EF422DE1D7C0024D478 /* Constants */,
 				FF914A6622D90A1200D1F949 /* Model */,
 				FF914A5922D6667700D1F949 /* Fonts */,
 				FF2F22DF22D6209100C91380 /* Perfect Budget */,
@@ -428,6 +439,7 @@
 				FF914A6322D7C87C00D1F949 /* ProgessBarView.swift in Sources */,
 				FF93E2A022DCCD150094AA08 /* CustomCell.swift in Sources */,
 				FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */,
+				FF015EF322DE1D730024D478 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
