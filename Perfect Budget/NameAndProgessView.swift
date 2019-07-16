@@ -48,14 +48,10 @@ private extension NameAndProgessView {
 
         // Style
         dayName.textColor = .black
-        guard let customFont2 = UIFont(name: "Montserrat-Bold", size: 16) else {
-            fatalError("""
-            Failed to load the "Montserrat-Black" font.
-            Make sure the font file is included in the project and the font name is correct
-            """)
-        }
-        dayName.font = UIFontMetrics.default.scaledFont(for: customFont1)
-        dailySpending.font = UIFontMetrics.default.scaledFont(for: customFont2)
+
+        dayName.font = UIFontMetrics.default.scaledFont(for: Constants.montBlack!)
+        dailySpending.font = UIFontMetrics.default.scaledFont(for: Constants.montBold!)
+
         dayName.adjustsFontForContentSizeCategory = true
         dailySpending.adjustsFontForContentSizeCategory = true
         dayName.text = getDayOfWeek()

@@ -39,7 +39,7 @@ private extension CustomCell {
         customView.addSubview(amount)
 
         // Style
-        customView.backgroundColor = 
+        customView.backgroundColor = Constants.moneyGreen
         customView.layer.borderColor = UIColor.black.cgColor
         customView.layer.borderWidth = 1
         customView.layer.cornerRadius = 16
