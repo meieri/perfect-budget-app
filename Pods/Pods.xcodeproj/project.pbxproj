@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		119F4586188B53E712C7F2EA125124F3 /* Pods-Perfect BudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Perfect BudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1A2C3C2C15E5F175DD91C0E9ECA0F9DE /* Pods_Perfect_BudgetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Perfect_BudgetTests.framework; path = "Pods-Perfect BudgetTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2C3C2C15E5F175DD91C0E9ECA0F9DE /* Pods_Perfect_BudgetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_BudgetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E43AFC047D73D87CA1855418E152B3C /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Source/Priority.swift; sourceTree = "<group>"; };
 		1F5699F040E86BE36567A41620638E5E /* Anchorage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Anchorage.modulemap; sourceTree = "<group>"; };
 		283A54DE194F6C437EE1495D7875C2DC /* Anchorage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Anchorage-prefix.pch"; sourceTree = "<group>"; };
@@ -78,20 +78,20 @@
 		8068B3B6760628D237E19A140715E792 /* Pods-Perfect BudgetTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Perfect BudgetTests-dummy.m"; sourceTree = "<group>"; };
 		889920E75B31D8C6CC6226C9196EC996 /* Anchorage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Anchorage.xcconfig; sourceTree = "<group>"; };
 		961630B6F07660AA26CDA014A70C03CA /* Pods-Perfect BudgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Perfect BudgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD6C5B2C4C55F98B4E014CB9FEE248C /* Pods-Perfect BudgetTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Perfect BudgetTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9E1DBD10958FA30CCD9F89313FE21F0A /* Pods-Perfect Budget-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Perfect Budget-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AB6833EAA24200D11CFDCB032815B64D /* Pods-Perfect BudgetUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Perfect BudgetUITests-umbrella.h"; sourceTree = "<group>"; };
 		ABD46A808022637E1E2B81B0510F7080 /* Pods-Perfect BudgetTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Perfect BudgetTests.modulemap"; sourceTree = "<group>"; };
-		B13B1ED51A1C9281E09BF21E4BF3B061 /* Pods_Perfect_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Perfect_Budget.framework; path = "Pods-Perfect Budget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B477F169CB917A9F07ABB3C6B0ED46BE /* Anchorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Anchorage.framework; path = Anchorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B13B1ED51A1C9281E09BF21E4BF3B061 /* Pods_Perfect_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B477F169CB917A9F07ABB3C6B0ED46BE /* Anchorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Anchorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79AC6C91D4EF96743C8CC6685EBECC8 /* Pods-Perfect BudgetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Perfect BudgetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D2FF15557496027486B504EC00BACAAE /* Pods-Perfect BudgetTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Perfect BudgetTests-umbrella.h"; sourceTree = "<group>"; };
 		DC1FF493E552F8BA76C17C076888A005 /* Pods-Perfect BudgetUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Perfect BudgetUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DD96B4CBFA1EB87B1F8BED5DACA150E3 /* Pods-Perfect BudgetUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Perfect BudgetUITests-dummy.m"; sourceTree = "<group>"; };
 		E52458BDC6F82A2A58ED5EBDD6B538FD /* Anchorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Anchorage.swift; path = Source/Anchorage.swift; sourceTree = "<group>"; };
 		E7C3D4CDD02304F4D5392ED70C8380B1 /* Pods-Perfect Budget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Perfect Budget.release.xcconfig"; sourceTree = "<group>"; };
-		F273C150E9BC49DB8743CC1476BCB479 /* Pods_Perfect_BudgetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Perfect_BudgetUITests.framework; path = "Pods-Perfect BudgetUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F273C150E9BC49DB8743CC1476BCB479 /* Pods_Perfect_BudgetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Perfect_BudgetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F52CF3AA6412EDDEA9855E8EBDF967A4 /* Pods-Perfect BudgetTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Perfect BudgetTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FBDAC9A8D4F99EA861198FB58133D748 /* Pods-Perfect BudgetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Perfect BudgetTests.release.xcconfig"; sourceTree = "<group>"; };
 		FBF648AAE545CAC019AFB6CBAB8EC4DA /* Pods-Perfect Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Perfect Budget.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,7 +263,6 @@
 				1E43AFC047D73D87CA1855418E152B3C /* Priority.swift */,
 				5D64992AADAF284A630FA3EDE751EBCC /* Support Files */,
 			);
-			name = Anchorage;
 			path = Anchorage;
 			sourceTree = "<group>";
 		};

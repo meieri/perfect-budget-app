@@ -90,8 +90,8 @@ private extension ProgessBarView {
             UIColor.black.setFill()
             context.cgContext.fillEllipse(in: CGRect(x: 107, y: 6, width: 25, height: 25))
         }
-        let nineSlice = img.roundedImage.resizableImage(withCapInsets: UIEdgeInsets.init(top: 0, left: 25, bottom: 0, right: 35))
-        progessBar.progressImage = nineSlice
+        let threeSlice = img.roundedImage.resizableImage(withCapInsets: UIEdgeInsets.init(top: 0, left: 25, bottom: 0, right: 35))
+        progessBar.progressImage = threeSlice
     }
 }
 
