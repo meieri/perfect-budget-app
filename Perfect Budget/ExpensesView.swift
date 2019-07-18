@@ -12,6 +12,7 @@ import Anchorage
 class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private var expenseTable = UITableView()
+    private var addExpense = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
     private var model = DayModel()
     let cellSpacingHeight: CGFloat = 10
 
@@ -55,12 +56,17 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.section).")
     }
+
+    @objc func addItUp(sender: UIButton!) {
+        print("Button tapped")
+    }
 }
 
 extension ExpensesView {
     func configureView() {
         // View Heirarchy
         self.view.addSubview(expenseTable)
+        self.view.addSubview(addExpense)
         expenseTable.register(CustomCell.self, forCellReuseIdentifier: "MyCell")
         expenseTable.dataSource = self
         expenseTable.delegate = self
@@ -69,9 +75,18 @@ extension ExpensesView {
         expenseTable.separatorStyle = .none
         expenseTable.backgroundColor = .clear
         // expenseTable.bounces = false
+        addExpense.backgroundColor = Constants.moneyGreen
+        addExpense.setTitle("Test Button", for: .normal)
+        addExpense.addTarget(self, action: #selector(addItUp), for: .touchUpInside)
+        addExpense.backgroundColor = .clear
+        addExpense.layer.cornerRadius = 5
+        addExpense.layer.borderWidth = 1
+        addExpense.layer.borderColor = UIColor.black.cgColor
 
         // Layout
         expenseTable.edgeAnchors == self.view.edgeAnchors
+
+        addExpense.topAnchor == self.view.bottomAnchor / 4
     }
 }
 

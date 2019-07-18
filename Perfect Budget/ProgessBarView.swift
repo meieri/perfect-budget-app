@@ -12,11 +12,11 @@ import Anchorage
 
 class ProgessBarView: UIView {
 
-    private var progessBar = UIProgressView()
+    private var progressBar = UIProgressView()
     private var currSpendLabel = UILabel()
     private var maxSpendLabel = UILabel()
     var maxSpending = 40
-    var currentSpending = 10
+    var currentSpending = 20
     var currentHeight: CGFloat = 0
 
     override init(frame: CGRect) {
@@ -42,12 +42,12 @@ private extension ProgessBarView {
     func configureView() {
 
         // View Heirarchy
-        self.addSubview(progessBar)
+        self.addSubview(progressBar)
         self.addSubview(currSpendLabel)
         self.addSubview(maxSpendLabel)
 
         // Style -- rounded corners for the progess bar (among other things) handled by the configureTrack function
-        progessBar.setProgress( Float(currentSpending) / Float(maxSpending), animated: true)
+        progressBar.setProgress( Float(currentSpending) / Float(maxSpending), animated: true)
         configureTrack(height: currentHeight)
         guard let customFont = UIFont(name: "Montserrat-Bold", size: 16) else {
             fatalError("""
@@ -66,14 +66,22 @@ private extension ProgessBarView {
         // Layout
         // Sets them to be the same size, the size of this is handled in NameAndProgessView
         //self.
-        progessBar.edgeAnchors == self.edgeAnchors
+        progressBar.edgeAnchors == self.edgeAnchors
+        currSpendLabel.topAnchor == progressBar.bottomAnchor + 5
+        // currSpendLabel.leadingAnchor == progressBar.leadingAnchor + (Float(currentSpending) / Float(maxSpending) * 200)
+
+        let anchor = (1 * progressBar.trailingAnchor / (progressBar.progress * 4)) - 20
+        currSpendLabel.centerXAnchor == anchor
+
+        maxSpendLabel.topAnchor == progressBar.bottomAnchor + 5
+        maxSpendLabel.centerXAnchor == progressBar.trailingAnchor - 20
     }
 
     func configureTrack(height: CGFloat) {
         guard height != 0 else { return }
 
-        progessBar.layer.cornerRadius = 16.0
-        progessBar.clipsToBounds = true
+        progressBar.layer.cornerRadius = 16.0
+        progressBar.clipsToBounds = true
 
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: 140, height: height))
         let img: UIImage = renderer.image { (context) in
@@ -91,7 +99,7 @@ private extension ProgessBarView {
             context.cgContext.fillEllipse(in: CGRect(x: 107, y: 6, width: 25, height: 25))
         }
         let threeSlice = img.roundedImage.resizableImage(withCapInsets: UIEdgeInsets.init(top: 0, left: 25, bottom: 0, right: 35))
-        progessBar.progressImage = threeSlice
+        progressBar.progressImage = threeSlice
     }
 }
 
