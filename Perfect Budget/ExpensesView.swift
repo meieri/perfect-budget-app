@@ -12,7 +12,7 @@ import Anchorage
 class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     private var expenseTable = UITableView()
-    private var addExpense = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+    private var addExpense = UIButton(frame: CGRect(x: 100, y: 100, width: 300, height: 50))
     private var model = DayModel()
     let cellSpacingHeight: CGFloat = 10
 
@@ -45,7 +45,6 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
         return headerView
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomCell
         cell.setReasonandAmount(reason: model.getExpenses()[indexPath.section].reason,  amount: model.getExpenses()[indexPath.section].amount)
@@ -76,17 +75,18 @@ extension ExpensesView {
         expenseTable.backgroundColor = .clear
         // expenseTable.bounces = false
         addExpense.backgroundColor = Constants.moneyGreen
-        addExpense.setTitle("Test Button", for: .normal)
+        addExpense.setTitle("Add It Up", for: .normal)
+        addExpense.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         addExpense.addTarget(self, action: #selector(addItUp), for: .touchUpInside)
-        addExpense.backgroundColor = .clear
-        addExpense.layer.cornerRadius = 5
+        addExpense.backgroundColor = Constants.moneyGreen
+        addExpense.layer.cornerRadius = 16
         addExpense.layer.borderWidth = 1
         addExpense.layer.borderColor = UIColor.black.cgColor
 
         // Layout
         expenseTable.edgeAnchors == self.view.edgeAnchors
-
-        addExpense.topAnchor == self.view.bottomAnchor / 4
+        addExpense.trailingAnchor == self.view.trailingAnchor - 10
+        addExpense.centerYAnchor == self.view.centerYAnchor + 180
     }
 }
 
