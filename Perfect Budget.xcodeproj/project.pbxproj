@@ -11,6 +11,9 @@
 		79E945DC5906AFB971645F4C /* Pods_Perfect_BudgetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 693550A01C2D017363713FE1 /* Pods_Perfect_BudgetTests.framework */; };
 		FEC41CDFF3C6DF3206EE3EA6 /* Pods_Perfect_BudgetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FF2B1DF69D64A67E430E36 /* Pods_Perfect_BudgetUITests.framework */; };
 		FF015EF322DE1D730024D478 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF015EF122DE1D6C0024D478 /* Constants.swift */; };
+		FF0DF43522E2462F0090F1D0 /* moneymoneyBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF0DF43422E2462E0090F1D0 /* moneymoneyBackground.jpg */; };
+		FF0DF43722E246A30090F1D0 /* rsz_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF0DF43622E246A30090F1D0 /* rsz_1.jpg */; };
+		FF16298622E4095D002E1F5E /* DayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF16298522E4095D002E1F5E /* DayPresenter.swift */; };
 		FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E022D6209100C91380 /* AppDelegate.swift */; };
 		FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E222D6209100C91380 /* DayViewController.swift */; };
 		FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E722D6209200C91380 /* Assets.xcassets */; };
@@ -20,7 +23,7 @@
 		FF914A5B22D666E400D1F949 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF914A5A22D666E400D1F949 /* Montserrat-Black.ttf */; };
 		FF914A5D22D6671C00D1F949 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF914A5C22D6671C00D1F949 /* Montserrat-Bold.ttf */; };
 		FF914A6122D7B81F00D1F949 /* NameAndProgessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6022D7B81F00D1F949 /* NameAndProgessView.swift */; };
-		FF914A6322D7C87C00D1F949 /* ProgessBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6222D7C87C00D1F949 /* ProgessBarView.swift */; };
+		FF914A6322D7C87C00D1F949 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6222D7C87C00D1F949 /* ProgressBarView.swift */; };
 		FF914A6522D8FA2200D1F949 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6422D8FA2200D1F949 /* DayModel.swift */; };
 		FF914A6822D9165200D1F949 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6722D9165100D1F949 /* ExpensesView.swift */; };
 		FF93E2A022DCCD150094AA08 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF93E29F22DCCD150094AA08 /* CustomCell.swift */; };
@@ -54,6 +57,9 @@
 		C420ACB637E7BB920E4531A1 /* Pods-Perfect BudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetTests.debug.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetTests/Pods-Perfect BudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC38E46FBCBC396E20C18EED /* Pods-Perfect BudgetUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Perfect BudgetUITests.release.xcconfig"; path = "Target Support Files/Pods-Perfect BudgetUITests/Pods-Perfect BudgetUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF015EF122DE1D6C0024D478 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF0DF43422E2462E0090F1D0 /* moneymoneyBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moneymoneyBackground.jpg; sourceTree = SOURCE_ROOT; };
+		FF0DF43622E246A30090F1D0 /* rsz_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rsz_1.jpg; sourceTree = SOURCE_ROOT; };
+		FF16298522E4095D002E1F5E /* DayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPresenter.swift; sourceTree = "<group>"; };
 		FF2F22DD22D6209100C91380 /* Perfect Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F22E022D6209100C91380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2F22E222D6209100C91380 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +75,7 @@
 		FF914A5A22D666E400D1F949 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Black.ttf"; path = "Montserrat/Montserrat-Black.ttf"; sourceTree = SOURCE_ROOT; };
 		FF914A5C22D6671C00D1F949 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "Montserrat/Montserrat-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		FF914A6022D7B81F00D1F949 /* NameAndProgessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndProgessView.swift; sourceTree = "<group>"; };
-		FF914A6222D7C87C00D1F949 /* ProgessBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgessBarView.swift; sourceTree = "<group>"; };
+		FF914A6222D7C87C00D1F949 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		FF914A6422D8FA2200D1F949 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		FF914A6722D9165100D1F949 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensesView.swift; path = "/Users/imeier/Documents/perfect-budget-app/Perfect Budget/Perfect Budget/ExpensesView.swift"; sourceTree = "<absolute>"; };
 		FF93E29F22DCCD150094AA08 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -166,11 +172,14 @@
 				FF2F22E022D6209100C91380 /* AppDelegate.swift */,
 				FF93E29F22DCCD150094AA08 /* CustomCell.swift */,
 				FF2F22E222D6209100C91380 /* DayViewController.swift */,
+				FF16298522E4095D002E1F5E /* DayPresenter.swift */,
 				FF914A6022D7B81F00D1F949 /* NameAndProgessView.swift */,
-				FF914A6222D7C87C00D1F949 /* ProgessBarView.swift */,
+				FF914A6222D7C87C00D1F949 /* ProgressBarView.swift */,
 				FF2F22E722D6209200C91380 /* Assets.xcassets */,
 				FF2F22E922D6209200C91380 /* LaunchScreen.storyboard */,
 				FF2F22EC22D6209200C91380 /* Info.plist */,
+				FF0DF43422E2462E0090F1D0 /* moneymoneyBackground.jpg */,
+				FF0DF43622E246A30090F1D0 /* rsz_1.jpg */,
 			);
 			path = "Perfect Budget";
 			sourceTree = "<group>";
@@ -320,6 +329,8 @@
 			files = (
 				FF914A5D22D6671C00D1F949 /* Montserrat-Bold.ttf in Resources */,
 				FF2F22EB22D6209200C91380 /* LaunchScreen.storyboard in Resources */,
+				FF0DF43522E2462F0090F1D0 /* moneymoneyBackground.jpg in Resources */,
+				FF0DF43722E246A30090F1D0 /* rsz_1.jpg in Resources */,
 				FF914A5B22D666E400D1F949 /* Montserrat-Black.ttf in Resources */,
 				FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */,
 			);
@@ -436,9 +447,10 @@
 				FF914A6822D9165200D1F949 /* ExpensesView.swift in Sources */,
 				FF914A6522D8FA2200D1F949 /* DayModel.swift in Sources */,
 				FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */,
-				FF914A6322D7C87C00D1F949 /* ProgessBarView.swift in Sources */,
+				FF914A6322D7C87C00D1F949 /* ProgressBarView.swift in Sources */,
 				FF93E2A022DCCD150094AA08 /* CustomCell.swift in Sources */,
 				FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */,
+				FF16298622E4095D002E1F5E /* DayPresenter.swift in Sources */,
 				FF015EF322DE1D730024D478 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

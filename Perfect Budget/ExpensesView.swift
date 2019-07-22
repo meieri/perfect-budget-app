@@ -11,6 +11,7 @@ import Anchorage
 
 class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var presenter: DayViewPresenter!
     private var expenseTable = UITableView()
     private var addExpense = UIButton(frame: CGRect(x: 100, y: 100, width: 300, height: 50))
     private var model = DayModel()
@@ -58,6 +59,44 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     @objc func addItUp(sender: UIButton!) {
         print("Button tapped")
+        showInputDialog()
+
+    }
+
+    func showInputDialog() {
+        //Creating UIAlertController and
+        //Setting title and message for the alert dialog
+        let alertController = UIAlertController(title: "Enter details of transaction?", message: "Enter your reason and amount", preferredStyle: .alert)
+
+        //the confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
+
+            //getting the input values from user
+            let reason = alertController.textFields?[0].text
+            let amount = alertController.textFields?[1].text
+            let numAmount = Double(amount!)
+            // self.model.addExpense(amount: numAmount!, reason: reason!)
+            self.presenter.addExpense(amount: numAmount!, reason: reason!)
+            self.presenter.showProgress()
+        }
+
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+
+        //adding textfields to our dialog box
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter Name"
+        }
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter Email"
+        }
+
+        //adding the action to dialogbox
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+
+        //finally presenting the dialog box
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -69,7 +108,7 @@ extension ExpensesView {
         expenseTable.register(CustomCell.self, forCellReuseIdentifier: "MyCell")
         expenseTable.dataSource = self
         expenseTable.delegate = self
-
+        expenseTable.tableFooterView = addExpense
         // Style
         expenseTable.separatorStyle = .none
         expenseTable.backgroundColor = .clear

@@ -29,8 +29,8 @@ class DayModel {
         ]
         let dateTimeComponents = calendar.dateComponents(requestedComponents, from: date)
         let time = String(dateTimeComponents.hour!) + String(dateTimeComponents.minute!)
-        let xp = Expense(amount: amount, time: time, reason: reason)
-        expenses.append(xp)
+        let exp = Expense(amount: amount, time: time, reason: reason)
+        expenses.append(exp)
         totalSpent += amount
     }
 

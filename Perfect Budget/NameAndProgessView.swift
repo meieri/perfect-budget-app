@@ -12,12 +12,15 @@ import Anchorage
 
 class NameAndProgessView: UIView {
 
+    var presenter: DayViewPresenter!
     private let dayName = UILabel()
     private let dailySpending = UILabel()
     private let addCash = UIButton()
-    private let progessBar = ProgessBarView()
+    private let progressBar: ProgressBarView
 
     override init(frame: CGRect) {
+        self.progressBar = ProgressBarView()
+        self.progressBar.presenter = self.presenter
         super.init(frame: frame)
         configureView()
     }
@@ -35,6 +38,10 @@ class NameAndProgessView: UIView {
         let dayInWeek = dateFormatter.string(from: date)
         return dayInWeek
     }
+
+    func setProgress(currSpending: Double) {
+        progressBar.setProgress(currSpending: currSpending)
+    }
 }
 
 private extension NameAndProgessView {
@@ -43,7 +50,7 @@ private extension NameAndProgessView {
         // View Heirarchy
         // self.addSubview(addCash)
         self.addSubview(dayName)
-        self.addSubview(progessBar)
+        self.addSubview(progressBar)
         self.addSubview(dailySpending)
 
         // Style
@@ -60,15 +67,15 @@ private extension NameAndProgessView {
         // Layout
         // Center in the middle of the screen
         dayName.centerXAnchor == self.centerXAnchor
-        progessBar.centerXAnchor == self.centerXAnchor
+        progressBar.centerXAnchor == self.centerXAnchor
         // Move a nice distance from the top
         dayName.topAnchor == self.topAnchor + 50
-        progessBar.topAnchor == dayName.bottomAnchor + 50
-        progessBar.widthAnchor == self.widthAnchor - 20
-        progessBar.heightAnchor == self.heightAnchor / 6
+        progressBar.topAnchor == dayName.bottomAnchor + 50
+        progressBar.widthAnchor == self.widthAnchor - 20
+        progressBar.heightAnchor == self.heightAnchor / 6
 
         dailySpending.leadingAnchor == self.leadingAnchor + 10
-        dailySpending.bottomAnchor == progessBar.topAnchor - 10
+        dailySpending.bottomAnchor == progressBar.topAnchor - 10
 
     }
 }

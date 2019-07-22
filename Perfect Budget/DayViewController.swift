@@ -9,12 +9,16 @@
 import UIKit
 import Anchorage
 
-class DayViewController: UIViewController {
+class DayViewController: UIViewController, DayView {
 
-    private let nameProgessView = NameAndProgessView()
-    private let expensesView = ExpensesView()
+
+    var presenter: DayViewPresenter!
+    private let nameProgessView: NameAndProgessView
+    private let expensesView: ExpensesView
 
     init() {
+        self.nameProgessView = NameAndProgessView()
+        self.expensesView = ExpensesView()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -28,6 +32,16 @@ class DayViewController: UIViewController {
     }
 
     override var prefersStatusBarHidden: Bool { return true }
+
+    func setProgress(currSpending: Double) {
+        nameProgessView.setProgress(currSpending: currSpending)
+    }
+
+    func setPresenters() {
+        nameProgessView.presenter = self.presenter
+        expensesView.presenter = self.presenter
+    }
+
 }
 
 private extension DayViewController {

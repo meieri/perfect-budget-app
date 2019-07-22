@@ -1,22 +1,22 @@
 //
-//  ProgessBarView.swift
+//  ProgressBarView.swift
 //  Perfect Budget
 //
 //  Created by Isaak Meier on 7/11/19.
 //  Copyright © 2019 Isaak Meier. All rights reserved.
 //
-
 import Foundation
 import UIKit
 import Anchorage
 
-class ProgessBarView: UIView {
+class ProgressBarView: UIView {
 
+    var presenter: DayViewPresenter!
     private var progressBar = UIProgressView()
     private var currSpendLabel = UILabel()
     private var maxSpendLabel = UILabel()
-    var maxSpending = 40
-    var currentSpending = 20
+    var maxSpending = 40.00
+    var currentSpending = 0.0
     var currentHeight: CGFloat = 0
 
     override init(frame: CGRect) {
@@ -36,9 +36,14 @@ class ProgessBarView: UIView {
             configureTrack(height: newHeight)
         }
     }
+
+    func setProgress(currSpending: Double) {
+        self.currentSpending = currSpending
+        configureView()
+    }
 }
 
-private extension ProgessBarView {
+private extension ProgressBarView {
     func configureView() {
 
         // View Heirarchy
@@ -68,10 +73,6 @@ private extension ProgessBarView {
         //self.
         progressBar.edgeAnchors == self.edgeAnchors
         currSpendLabel.topAnchor == progressBar.bottomAnchor + 5
-        // currSpendLabel.leadingAnchor == progressBar.leadingAnchor + (Float(currentSpending) / Float(maxSpending) * 200)
-
-        let anchor = (1 * progressBar.trailingAnchor / (progressBar.progress * 4)) - 20
-        currSpendLabel.centerXAnchor == anchor
 
         maxSpendLabel.topAnchor == progressBar.bottomAnchor + 5
         maxSpendLabel.centerXAnchor == progressBar.trailingAnchor - 20
@@ -83,8 +84,10 @@ private extension ProgessBarView {
         progressBar.layer.cornerRadius = 16.0
         progressBar.clipsToBounds = true
 
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 140, height: height))
-        let img: UIImage = renderer.image { (context) in
+        let newSize = CGSize(width: 140, height: height);
+
+        let renderer = UIGraphicsImageRenderer(size: newSize)
+        let baseImg: UIImage = renderer.image { (context) in
             // this is the image border
             UIColor(displayP3Red: 133/255, green: 187/255, blue: 101/255, alpha: 1).setStroke()
             // I don't actually know what this does
@@ -92,14 +95,40 @@ private extension ProgessBarView {
             // The color of the image itself
             UIColor(displayP3Red: 133/255, green: 187/255, blue: 101/255, alpha: 1).setFill()
             // fill her up
-            context.fill(CGRect(x: 1, y: 1, width: 140, height: height))
-
+            context.fill(CGRect(x: 1, y: 1, width: newSize.width, height: newSize.height))
             UIColor.black.setStroke()
             UIColor.black.setFill()
-            context.cgContext.fillEllipse(in: CGRect(x: 107, y: 6, width: 25, height: 25))
+            context.cgContext.fillEllipse(in: CGRect(x: 107, y: 7, width: 23, height: 23))
         }
-        let threeSlice = img.roundedImage.resizableImage(withCapInsets: UIEdgeInsets.init(top: 0, left: 25, bottom: 0, right: 35))
+        guard let moneyOverlay = UIImage(named: "rsz_1.jpg") else { return }
+
+        // UIGraphicsBeginImageContext(newSize)
+        // let origin = CGPoint(x: 0, y: 0)
+        // baseImg.draw(at: origin, blendMode: CGBlendMode.normal, alpha: 1)
+        // moneyOverlay.draw(at: origin, blendMode: CGBlendMode.normal, alpha: 0.2)
+        // let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        // UIGraphicsEndImageContext()
+
+        let threeSlice = baseImg.roundedImage.resizableImage(withCapInsets: UIEdgeInsets.init(top: 0, left: 25, bottom: 0, right: 35))
         progressBar.progressImage = threeSlice
+        configureCurrentProgress()
+    }
+
+    func configureCurrentProgress() {
+        progressBar.translatesAutoresizingMaskIntoConstraints = false
+        if progressBar.progress == 1.0 {
+            NSLayoutConstraint(item: currSpendLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 0.44, constant: -5).isActive = true
+            maxSpendLabel.isHidden = !maxSpendLabel.isHidden
+            DispatchQueue.main.async {
+                self.currSpendLabel.text = "Budget Reached!"
+            }
+        }
+        else if progressBar.progress == 0.0 {
+            NSLayoutConstraint(item: currSpendLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 0.12, constant: -5).isActive = true
+        }
+        else {
+            NSLayoutConstraint(item: currSpendLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: CGFloat(progressBar.progress), constant: -5).isActive = true
+        }
     }
 }
 
