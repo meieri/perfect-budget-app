@@ -12,7 +12,11 @@ import Anchorage
 class DayViewController: UIViewController, DayView {
 
 
-    var presenter: DayViewPresenter!
+    var presenter: DayViewPresenter! {
+        didSet {
+            setPresenters()
+        }
+    }
     private let nameProgessView: NameAndProgessView
     private let expensesView: ExpensesView
 
@@ -36,15 +40,15 @@ class DayViewController: UIViewController, DayView {
     func setProgress(currSpending: Double) {
         nameProgessView.setProgress(currSpending: currSpending)
     }
+}
+
+private extension DayViewController {
 
     func setPresenters() {
         nameProgessView.presenter = self.presenter
         expensesView.presenter = self.presenter
     }
 
-}
-
-private extension DayViewController {
     func configureView() {
 
         // View Hierarchy

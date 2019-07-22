@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let view = DayViewController()
         let presenter = DayPresenter(view: view, day: model)
         view.presenter = presenter
-        view.setPresenters()
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()

@@ -15,9 +15,11 @@ class ProgressBarView: UIView {
     private var progressBar = UIProgressView()
     private var currSpendLabel = UILabel()
     private var maxSpendLabel = UILabel()
-    var maxSpending = 40.00
-    var currentSpending = 0.0
-    var currentHeight: CGFloat = 0
+    private var maxSpending = 40.00
+    private var currentSpending = 0.0
+    private var currentHeight: CGFloat = 0
+
+    private var labelLeadingConstraint: NSLayoutConstraint?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -115,24 +117,27 @@ private extension ProgressBarView {
     }
 
     func configureCurrentProgress() {
-        progressBar.translatesAutoresizingMaskIntoConstraints = false
-        if progressBar.progress == 1.0 {
-            NSLayoutConstraint(item: currSpendLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 0.44, constant: -5).isActive = true
-            maxSpendLabel.isHidden = !maxSpendLabel.isHidden
-            DispatchQueue.main.async {
+        labelLeadingConstraint?.isActive = false
+
+        DispatchQueue.main.async {
+            var multiplier: Float
+            if self.progressBar.progress == 1.0 {
+                multiplier = 0.44
                 self.currSpendLabel.text = "Budget Reached!"
+                self.maxSpendLabel.isHidden = true
             }
-        }
-        else if progressBar.progress == 0.0 {
-            NSLayoutConstraint(item: currSpendLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 0.12, constant: -5).isActive = true
-        }
-        else {
-            NSLayoutConstraint(item: currSpendLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: CGFloat(progressBar.progress), constant: -5).isActive = true
+            else if self.progressBar.progress == 0.0 {
+                multiplier = 0.12
+            }
+            else {
+                multiplier = self.progressBar.progress - 5
+            }
+            self.labelLeadingConstraint = self.currSpendLabel.trailingAnchor == self.trailingAnchor * multiplier - 5
         }
     }
 }
 
-extension UIImage{
+extension UIImage {
     var roundedImage: UIImage {
         let rect = CGRect(origin:CGPoint(x: 0, y: 0), size: self.size)
         UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
