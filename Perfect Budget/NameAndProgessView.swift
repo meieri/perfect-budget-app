@@ -12,7 +12,11 @@ import Anchorage
 
 class NameAndProgessView: UIView {
 
-    var presenter: DayViewPresenter!
+    var presenter: DayViewPresenter! {
+        didSet {
+            setPresenters()
+        }
+    }
     private let dayName = UILabel()
     private let dailySpending = UILabel()
     private let addCash = UIButton()
@@ -45,6 +49,11 @@ class NameAndProgessView: UIView {
 }
 
 private extension NameAndProgessView {
+
+    func setPresenters() {
+        self.progressBar.presenter = self.presenter
+    }
+
     func configureView() {
 
         // View Heirarchy

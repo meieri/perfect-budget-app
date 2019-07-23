@@ -25,7 +25,7 @@ class CustomCell: UITableViewCell {
 
     public func setReasonandAmount(reason: String, amount: Double) {
         self.reason.text = reason
-        self.amount.text = String(amount)
+        self.amount.text = "$" + String(amount)
     }
 }
 
@@ -44,17 +44,27 @@ private extension CustomCell {
         customView.layer.borderWidth = 1
         customView.layer.cornerRadius = 16
         customView.clipsToBounds = true
+        reason.font = Constants.montBoldSmall
+        amount.font = Constants.montBoldSmall
 
         // Layout
-        reason.leadingAnchor == customView.leadingAnchor + 10
+        // let insets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        // contentView.layoutMargins = insets
+
+        contentView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        customView.heightAnchor == self.contentView.heightAnchor
+        customView.leadingAnchor == self.contentView.leadingAnchor + 10
+        customView.trailingAnchor == self.contentView.trailingAnchor - 10
+
+        reason.leadingAnchor == customView.leadingAnchor + 20
         reason.centerYAnchor == customView.centerYAnchor
 
         reason.trailingAnchor == amount.leadingAnchor
 
-        amount.trailingAnchor == customView.trailingAnchor - 10
+        amount.trailingAnchor == customView.trailingAnchor - 20
         amount.centerYAnchor == customView.centerYAnchor
 
-        let insets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-        customView.edgeAnchors == self.edgeAnchors + insets
+        // customView.leadingAnchor == self.contentView.leadingAnchor + 10
+
     }
 }

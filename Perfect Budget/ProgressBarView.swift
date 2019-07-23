@@ -19,7 +19,7 @@ class ProgressBarView: UIView {
     private var currentSpending = 0.0
     private var currentHeight: CGFloat = 0
 
-    private var labelLeadingConstraint: NSLayoutConstraint?
+    private weak var labelLeadingConstraint: NSLayoutConstraint?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -102,8 +102,8 @@ private extension ProgressBarView {
             UIColor.black.setFill()
             context.cgContext.fillEllipse(in: CGRect(x: 107, y: 7, width: 23, height: 23))
         }
-        guard let moneyOverlay = UIImage(named: "rsz_1.jpg") else { return }
 
+        // guard let moneyOverlay = UIImage(named: "rsz_1.jpg") else { return }
         // UIGraphicsBeginImageContext(newSize)
         // let origin = CGPoint(x: 0, y: 0)
         // baseImg.draw(at: origin, blendMode: CGBlendMode.normal, alpha: 1)
@@ -130,9 +130,13 @@ private extension ProgressBarView {
                 multiplier = 0.12
             }
             else {
-                multiplier = self.progressBar.progress - 5
+                multiplier = self.progressBar.progress
             }
+
             self.labelLeadingConstraint = self.currSpendLabel.trailingAnchor == self.trailingAnchor * multiplier - 5
+            UIView .animate(withDuration: 0.5, animations: {
+                self.currSpendLabel.layoutIfNeeded()
+            })
         }
     }
 }

@@ -12,6 +12,7 @@ import UIKit
 struct Constants {
 
     static let montBold = UIFont(name: "Montserrat-Bold", size: 20)
+    static let montBoldSmall = UIFont(name: "Montserrat-Bold", size: 18)
 
     static let montBlack = UIFont(name: "Montserrat-Black", size: 20)
 

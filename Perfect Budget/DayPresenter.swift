@@ -16,6 +16,7 @@ protocol DayViewPresenter {
     init(view: DayView, day: DayModel)
     func showProgress()
     func addExpense(amount: Double, reason: String)
+    func getExpenses() -> [Expense]
 }
 
 class DayPresenter: DayViewPresenter {
@@ -34,5 +35,9 @@ class DayPresenter: DayViewPresenter {
 
     func addExpense(amount: Double, reason: String) {
         self.day.addExpense(amount: amount, reason: reason)
+    }
+
+    func getExpenses() -> [Expense] {
+        return self.day.getExpenses()
     }
 }
