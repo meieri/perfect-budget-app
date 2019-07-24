@@ -9,17 +9,22 @@
 import Foundation
 
 protocol DayView: class {
-    func setProgress(currSpending: Double)
+    func showProgress(progress: Float)
+    func showDayOfWeek(day: String)
+    func showSpendingValues(currSpend: Double, maxSpend: Double)
 }
 
 protocol DayViewPresenter {
     init(view: DayView, day: DayModel)
-    func showProgress()
+    func setProgress()
+    func setDayOfWeek()
+    func setSpendingValues()
     func addExpense(amount: Double, reason: String)
     func getExpenses() -> [Expense]
 }
 
 class DayPresenter: DayViewPresenter {
+
     unowned let view: DayView
     let day: DayModel
 
@@ -28,9 +33,16 @@ class DayPresenter: DayViewPresenter {
         self.day = day
     }
 
-    func showProgress() {
-        let currSpending = day.totalSpent
-        self.view.setProgress(currSpending: currSpending!)
+    func setProgress() {
+        self.view.showProgress(progress: day.getProgress())
+    }
+
+    func setDayOfWeek() {
+        self.view.showDayOfWeek(day: day.getDayOfWeek())
+    }
+
+    func setSpendingValues() {
+        self.view.showSpendingValues(currSpend: day.getTotalSpent(), maxSpend: day.getBudget())
     }
 
     func addExpense(amount: Double, reason: String) {

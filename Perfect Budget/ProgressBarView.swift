@@ -15,8 +15,6 @@ class ProgressBarView: UIView {
     private var progressBar = UIProgressView()
     private var currSpendLabel = UILabel()
     private var maxSpendLabel = UILabel()
-    private var maxSpending = 40.00
-    private var currentSpending = 0.0
     private var currentHeight: CGFloat = 0
 
     private weak var labelLeadingConstraint: NSLayoutConstraint?
@@ -39,9 +37,14 @@ class ProgressBarView: UIView {
         }
     }
 
-    func setProgress(currSpending: Double) {
-        self.currentSpending = currSpending
+    func showProgress(progress: Float) {
+        self.progressBar.setProgress(progress, animated: true)
         configureView()
+    }
+
+    func showSpendingValues(currSpend: Double, maxSpend: Double) {
+        currSpendLabel.text = "$" + String(currSpend)
+        maxSpendLabel.text = "$" + String(maxSpend)
     }
 }
 
@@ -54,7 +57,6 @@ private extension ProgressBarView {
         self.addSubview(maxSpendLabel)
 
         // Style -- rounded corners for the progess bar (among other things) handled by the configureTrack function
-        progressBar.setProgress( Float(currentSpending) / Float(maxSpending), animated: true)
         configureTrack(height: currentHeight)
         guard let customFont = UIFont(name: "Montserrat-Bold", size: 16) else {
             fatalError("""
@@ -67,8 +69,6 @@ private extension ProgressBarView {
         maxSpendLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
         currSpendLabel.adjustsFontForContentSizeCategory = true
         maxSpendLabel.adjustsFontForContentSizeCategory = true
-        currSpendLabel.text = "$" + String(currentSpending)
-        maxSpendLabel.text = "$" + String(maxSpending)
 
         // Layout
         // Sets them to be the same size, the size of this is handled in NameAndProgessView
@@ -117,9 +117,10 @@ private extension ProgressBarView {
     }
 
     func configureCurrentProgress() {
-        labelLeadingConstraint?.isActive = false
 
         DispatchQueue.main.async {
+            self.presenter.setSpendingValues()
+            self.labelLeadingConstraint?.isActive = false
             var multiplier: Float
             if self.progressBar.progress == 1.0 {
                 multiplier = 0.44
@@ -129,14 +130,20 @@ private extension ProgressBarView {
             else if self.progressBar.progress == 0.0 {
                 multiplier = 0.12
             }
+            else if self.progressBar.progress > 0.8 {
+                multiplier = 0.85
+            }
             else {
                 multiplier = self.progressBar.progress
             }
 
             self.labelLeadingConstraint = self.currSpendLabel.trailingAnchor == self.trailingAnchor * multiplier - 5
-            UIView .animate(withDuration: 0.5, animations: {
-                self.currSpendLabel.layoutIfNeeded()
+
+            UIView.animate(withDuration: 0.4, animations: {
+                self.presenter.setProgress()
+                self.layoutIfNeeded()
             })
+
         }
     }
 }

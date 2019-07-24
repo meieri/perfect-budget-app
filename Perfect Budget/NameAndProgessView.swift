@@ -33,18 +33,16 @@ class NameAndProgessView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // Quick function to get name of day of week from date
-    // Move this to the model, make it build on init? Just make the model store a date that updates daily haha
-    func getDayOfWeek() -> String {
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        let dayInWeek = dateFormatter.string(from: date)
-        return dayInWeek
+    func showProgress(progress: Float) {
+        progressBar.showProgress(progress: progress)
     }
 
-    func setProgress(currSpending: Double) {
-        progressBar.setProgress(currSpending: currSpending)
+    func showDayOfWeek(day: String) {
+        dayName.text = day
+    }
+
+    func showSpendingValues(currSpend: Double, maxSpend: Double) {
+        self.progressBar.showSpendingValues(currSpend: currSpend, maxSpend: maxSpend)
     }
 }
 
@@ -52,6 +50,8 @@ private extension NameAndProgessView {
 
     func setPresenters() {
         self.progressBar.presenter = self.presenter
+        // view configuration that needs the presenter has to happen here, because in configureView() it doesn't exist yet
+        presenter.setDayOfWeek()
     }
 
     func configureView() {
@@ -70,7 +70,6 @@ private extension NameAndProgessView {
 
         dayName.adjustsFontForContentSizeCategory = true
         dailySpending.adjustsFontForContentSizeCategory = true
-        dayName.text = getDayOfWeek()
         dailySpending.text = "Daily Spending"
 
         // Layout

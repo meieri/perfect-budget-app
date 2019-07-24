@@ -11,7 +11,6 @@ import Anchorage
 
 class DayViewController: UIViewController, DayView {
 
-
     var presenter: DayViewPresenter! {
         didSet {
             setPresenters()
@@ -37,8 +36,16 @@ class DayViewController: UIViewController, DayView {
 
     override var prefersStatusBarHidden: Bool { return true }
 
-    func setProgress(currSpending: Double) {
-        nameProgessView.setProgress(currSpending: currSpending)
+    func showProgress(progress: Float) {
+        nameProgessView.showProgress(progress: progress)
+    }
+
+    func showDayOfWeek(day: String) {
+        self.nameProgessView.showDayOfWeek(day: day)
+    }
+
+    func showSpendingValues(currSpend: Double, maxSpend: Double) {
+        self.nameProgessView.showSpendingValues(currSpend: currSpend, maxSpend: maxSpend)
     }
 }
 

@@ -49,6 +49,25 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
 
+    // func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    //     let deleteAction = self.contextualDeleteAction(forRowAtIndexPath: indexPath)
+    //     let flagAction = self.contextualToggleFlagAction(forRowAtIndexPath: indexPath)
+    //     let swipeConfig = UISwipeActionsConfiguration(actions: [deleteAction, flagAction])
+    //     return swipeConfig
+    // }
+
+    //func tableView(_ tableView: UITableView, trail indexPath: IndexPath) -> [UITableViewRowAction]? {
+    //    let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (UITableViewRowAction , IndexPath ) in
+    //        print("cool")
+    //    }
+
+    //    let share = UITableViewRowAction(style: .normal, title: "Disable ")  { (UITableViewRowAction , IndexPath ) in
+    //        print("not cool")
+    //    }
+
+    //    return [delete, share]
+    //}
+
     // Method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.section).")
@@ -70,7 +89,7 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
             let numAmount = Double(amount!)
             // self.model.addExpense(amount: numAmount!, reason: reason!)
             self.presenter.addExpense(amount: numAmount!, reason: reason!)
-            self.presenter.showProgress()
+            self.presenter.setProgress()
             self.expenseTable.reloadData()
             // self.configureView()
         }
@@ -92,9 +111,6 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
 }
 
 extension ExpensesView {
-    func setPresenters() {
-
-    }
 
     func configureView() {
 

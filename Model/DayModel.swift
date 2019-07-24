@@ -9,16 +9,22 @@
 import Foundation
 
 class DayModel {
+    var budget: Double!
     var totalSpent: Double!
     let date: Date!
     var nameOfDay: String!
     var expenses: Array<Expense>
 
     init() {
+        budget = 40.0
         totalSpent = 0.0
         date = Date()
         expenses = []
-        nameOfDay = self.getDayOfWeek()
+        nameOfDay = self.dayOfWeek()
+    }
+
+    public func setBudget(budget: Double) {
+        self.budget = budget
     }
 
     public func addExpense(amount: Double, reason: String) {
@@ -39,13 +45,31 @@ class DayModel {
         return copy
     }
 
-    private func getDayOfWeek() -> String {
+    public func getProgress() -> Float {
+        return Float(self.totalSpent) / Float(self.budget)
+    }
+
+    public func getTotalSpent() -> Double {
+        return self.totalSpent
+    }
+
+    public func getBudget() -> Double {
+        return self.budget
+    }
+
+    public func getDayOfWeek() -> String {
+        return self.nameOfDay
+    }
+}
+
+private extension DayModel {
+
+    func dayOfWeek() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         let dayInWeek = dateFormatter.string(from: date)
         return dayInWeek
     }
-
 }
 
 struct Expense {
