@@ -14,12 +14,13 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
     var presenter: DayViewPresenter!
 
     private var expenseTable = UITableView()
-    private var addExpense = UIButton(frame: CGRect(x: 100, y: 100, width: 300, height: 50))
+    private var addExpense = UIButton()
+    private let customView = UIView()
     let cellSpacingHeight: CGFloat = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.addExpense(amount: 10, reason: "Ok")
+        presenter.addExpense(amount: 10, reason: "ok")
         configureView()
     }
 
@@ -49,24 +50,9 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
 
-    // func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    //     let deleteAction = self.contextualDeleteAction(forRowAtIndexPath: indexPath)
-    //     let flagAction = self.contextualToggleFlagAction(forRowAtIndexPath: indexPath)
-    //     let swipeConfig = UISwipeActionsConfiguration(actions: [deleteAction, flagAction])
-    //     return swipeConfig
-    // }
-
-    //func tableView(_ tableView: UITableView, trail indexPath: IndexPath) -> [UITableViewRowAction]? {
-    //    let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (UITableViewRowAction , IndexPath ) in
-    //        print("cool")
-    //    }
-
-    //    let share = UITableViewRowAction(style: .normal, title: "Disable ")  { (UITableViewRowAction , IndexPath ) in
-    //        print("not cool")
-    //    }
-
-    //    return [delete, share]
-    //}
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        showInputDialog()
+    }
 
     // Method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -75,6 +61,10 @@ class ExpensesView: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     @objc func addItUp(sender: UIButton!) {
         showInputDialog()
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return self.customView
     }
 
     func showInputDialog() {
@@ -116,18 +106,21 @@ extension ExpensesView {
 
         // View Heirarchy
         self.view.addSubview(expenseTable)
-        self.view.addSubview(addExpense)
+        customView.addSubview(addExpense)
+        self.view.addSubview(customView)
         expenseTable.register(CustomCell.self, forCellReuseIdentifier: "MyCell")
         expenseTable.dataSource = self
         expenseTable.delegate = self
-        expenseTable.tableFooterView = addExpense
+
+        // self.expenseTable.addSubview(customView)
+
         // Style
         expenseTable.separatorStyle = .none
         expenseTable.backgroundColor = .clear
         // expenseTable.bounces = false
         addExpense.backgroundColor = Constants.moneyGreen
         addExpense.setTitle("Add It Up", for: .normal)
-        addExpense.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        // addExpense.titleEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         addExpense.addTarget(self, action: #selector(addItUp), for: .touchUpInside)
         addExpense.backgroundColor = Constants.moneyGreen
         addExpense.layer.cornerRadius = 16
@@ -136,8 +129,10 @@ extension ExpensesView {
 
         // Layout
         expenseTable.edgeAnchors == self.view.edgeAnchors
-        addExpense.trailingAnchor == self.view.trailingAnchor - 10
-        addExpense.centerYAnchor == self.view.centerYAnchor + 180
+
+        addExpense.heightAnchor == customView.heightAnchor
+        addExpense.leadingAnchor == customView.leadingAnchor
+        addExpense.trailingAnchor == customView.trailingAnchor - 50
     }
 }
 
