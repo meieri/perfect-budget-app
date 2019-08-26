@@ -7,6 +7,7 @@ target 'Perfect Budget' do
 
   # Pods for Perfect Budget
   pod 'Anchorage'
+  pod 'AppCenter'
 
   target 'Perfect BudgetTests' do
     inherit! :search_paths

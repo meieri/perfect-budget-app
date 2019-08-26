@@ -1,16 +1,28 @@
 PODS:
   - Anchorage (4.3.1)
+  - AppCenter (2.3.0):
+    - AppCenter/Analytics (= 2.3.0)
+    - AppCenter/Crashes (= 2.3.0)
+  - AppCenter/Analytics (2.3.0):
+    - AppCenter/Core
+  - AppCenter/Core (2.3.0)
+  - AppCenter/Crashes (2.3.0):
+    - AppCenter/Core
 
 DEPENDENCIES:
   - Anchorage
+  - AppCenter
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Anchorage
+  trunk:
+    - AppCenter
 
 SPEC CHECKSUMS:
   Anchorage: a187da0bc9b07440637d42c8744b8c82a4490295
+  AppCenter: 9784d2fc998c9bd0b8fbaf4fb9ed69526d12ce1a
 
-PODFILE CHECKSUM: 405f9de9a0736e378c4e96326219cd006da2ac27
+PODFILE CHECKSUM: abc649c93837ea5074b4b3c2841a92508ad80634
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.8.0.beta.1

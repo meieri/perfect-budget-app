@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabController
         window?.makeKeyAndVisible()
-        
+
+        MSAppCenter.start("b1a73411-d4d5-468f-a362-0d6853177ad8", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+            ])
+
         return true
     }
 
