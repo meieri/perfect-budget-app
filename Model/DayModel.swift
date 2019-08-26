@@ -7,20 +7,46 @@
 //
 
 import Foundation
+import os.log
 
-class DayModel {
-    var budget: Double!
-    var totalSpent: Double!
-    let date: Date!
-    var nameOfDay: String!
-    var expenses: Array<Expense>
+class DayModel: NSObject, NSCoding {
 
-    init() {
-        budget = 40.0
-        totalSpent = 0.0
-        date = Date()
-        expenses = []
-        nameOfDay = self.dayOfWeek()
+    required convenience init?(coder aDecoder: NSCoder) {
+
+        guard let expenses = aDecoder.decodeObject(forKey: PropertyKey.expenses) as? [Expense] else {
+            os_log("Unable to decode the expenses array for your budget.", log: OSLog.default)
+            return nil
+        }
+
+        let budget = aDecoder.decodeDouble(forKey: PropertyKey.budget)
+        let totalSpent = aDecoder.decodeDouble(forKey: PropertyKey.totalSpent)
+        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! Date
+
+        self.init(budget: budget, spent: totalSpent, date: date, expenses: expenses)
+    }
+
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("meals")
+
+    var budget: Double
+    var totalSpent: Double
+    let date: Date
+    var nameOfDay = DayModel.dayOfWeek()
+    var expenses = [Expense]()
+
+    init(budget: Double, spent: Double, date: Date, expenses: [Expense]) {
+        self.budget = budget
+        self.totalSpent = spent
+        self.date = date
+        super.init()
+    }
+
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(budget, forKey: PropertyKey.budget)
+        aCoder.encode(totalSpent, forKey: PropertyKey.totalSpent)
+        aCoder.encode(date, forKey: PropertyKey.date)
+        aCoder.encode(expenses, forKey: PropertyKey.expenses)
+        aCoder.encode(nameOfDay, forKey: PropertyKey.nameOfDay)
     }
 
     public func setBudget(budget: Double) {
@@ -40,7 +66,7 @@ class DayModel {
         totalSpent += amount
     }
 
-    public func getExpenses() -> Array<Expense> {
+    public func getExpenses() -> [Expense] {
         let copy = expenses
         return copy
     }
@@ -64,7 +90,8 @@ class DayModel {
 
 private extension DayModel {
 
-    func dayOfWeek() -> String {
+    static func dayOfWeek() -> String {
+        let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         let dayInWeek = dateFormatter.string(from: date)
@@ -83,4 +110,12 @@ struct Expense {
         self.time = time
         self.reason = reason
     }
+}
+
+struct PropertyKey {
+    static let budget = "budget"
+    static let totalSpent = "totalSpent"
+    static let date = "date"
+    static let nameOfDay = "nameOfDay"
+    static let expenses = "expenses"
 }

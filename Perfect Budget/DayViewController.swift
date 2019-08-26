@@ -17,11 +17,11 @@ class DayViewController: UIViewController, DayView {
         }
     }
     private let nameProgessView: NameAndProgessView
-    private let expensesView: ExpensesView
+    private let expensesView: ExpensesViewController
 
     init() {
         self.nameProgessView = NameAndProgessView()
-        self.expensesView = ExpensesView()
+        self.expensesView = ExpensesViewController()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -37,7 +37,7 @@ class DayViewController: UIViewController, DayView {
     override var prefersStatusBarHidden: Bool { return true }
 
     func showProgress(progress: Float) {
-        nameProgessView.showProgress(progress: progress)
+        self.nameProgessView.showProgress(progress: progress)
     }
 
     func showDayOfWeek(day: String) {
@@ -47,6 +47,11 @@ class DayViewController: UIViewController, DayView {
     func showSpendingValues(currSpend: Double, maxSpend: Double) {
         self.nameProgessView.showSpendingValues(currSpend: currSpend, maxSpend: maxSpend)
     }
+
+    func showInputDialog() {
+        self.expensesView.showInputDialog()
+    }
+
 }
 
 private extension DayViewController {

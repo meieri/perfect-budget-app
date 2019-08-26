@@ -14,6 +14,7 @@
 		FF0DF43522E2462F0090F1D0 /* moneymoneyBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF0DF43422E2462E0090F1D0 /* moneymoneyBackground.jpg */; };
 		FF0DF43722E246A30090F1D0 /* rsz_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF0DF43622E246A30090F1D0 /* rsz_1.jpg */; };
 		FF16298622E4095D002E1F5E /* DayPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF16298522E4095D002E1F5E /* DayPresenter.swift */; };
+		FF2B384A22EA20E3005D5E20 /* customTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B384922EA20E3005D5E20 /* customTabBarController.swift */; };
 		FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E022D6209100C91380 /* AppDelegate.swift */; };
 		FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2F22E222D6209100C91380 /* DayViewController.swift */; };
 		FF2F22E822D6209200C91380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2F22E722D6209200C91380 /* Assets.xcassets */; };
@@ -25,8 +26,9 @@
 		FF914A6122D7B81F00D1F949 /* NameAndProgessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6022D7B81F00D1F949 /* NameAndProgessView.swift */; };
 		FF914A6322D7C87C00D1F949 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6222D7C87C00D1F949 /* ProgressBarView.swift */; };
 		FF914A6522D8FA2200D1F949 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6422D8FA2200D1F949 /* DayModel.swift */; };
-		FF914A6822D9165200D1F949 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6722D9165100D1F949 /* ExpensesView.swift */; };
+		FF914A6822D9165200D1F949 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF914A6722D9165100D1F949 /* ExpensesViewController.swift */; };
 		FF93E2A022DCCD150094AA08 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF93E29F22DCCD150094AA08 /* CustomCell.swift */; };
+		FFE4796522E8E90D00D3E468 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE4796422E8E90D00D3E468 /* ButtonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		FF0DF43422E2462E0090F1D0 /* moneymoneyBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moneymoneyBackground.jpg; sourceTree = SOURCE_ROOT; };
 		FF0DF43622E246A30090F1D0 /* rsz_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rsz_1.jpg; sourceTree = SOURCE_ROOT; };
 		FF16298522E4095D002E1F5E /* DayPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPresenter.swift; sourceTree = "<group>"; };
+		FF2B384922EA20E3005D5E20 /* customTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTabBarController.swift; sourceTree = "<group>"; };
 		FF2F22DD22D6209100C91380 /* Perfect Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Perfect Budget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2F22E022D6209100C91380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2F22E222D6209100C91380 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +80,9 @@
 		FF914A6022D7B81F00D1F949 /* NameAndProgessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndProgessView.swift; sourceTree = "<group>"; };
 		FF914A6222D7C87C00D1F949 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		FF914A6422D8FA2200D1F949 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
-		FF914A6722D9165100D1F949 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensesView.swift; path = "/Users/imeier/Documents/perfect-budget-app/Perfect Budget/Perfect Budget/ExpensesView.swift"; sourceTree = "<absolute>"; };
+		FF914A6722D9165100D1F949 /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensesViewController.swift; path = "/Users/imeier/Documents/perfect-budget-app/Perfect Budget/Perfect Budget/ExpensesViewController.swift"; sourceTree = "<absolute>"; };
 		FF93E29F22DCCD150094AA08 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		FFE4796422E8E90D00D3E468 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,10 +172,12 @@
 		FF2F22DF22D6209100C91380 /* Perfect Budget */ = {
 			isa = PBXGroup;
 			children = (
-				FF914A6722D9165100D1F949 /* ExpensesView.swift */,
+				FF914A6722D9165100D1F949 /* ExpensesViewController.swift */,
+				FFE4796422E8E90D00D3E468 /* ButtonCell.swift */,
 				FF2F22E022D6209100C91380 /* AppDelegate.swift */,
 				FF93E29F22DCCD150094AA08 /* CustomCell.swift */,
 				FF2F22E222D6209100C91380 /* DayViewController.swift */,
+				FF2B384922EA20E3005D5E20 /* customTabBarController.swift */,
 				FF16298522E4095D002E1F5E /* DayPresenter.swift */,
 				FF914A6022D7B81F00D1F949 /* NameAndProgessView.swift */,
 				FF914A6222D7C87C00D1F949 /* ProgressBarView.swift */,
@@ -444,14 +450,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF914A6122D7B81F00D1F949 /* NameAndProgessView.swift in Sources */,
-				FF914A6822D9165200D1F949 /* ExpensesView.swift in Sources */,
+				FF914A6822D9165200D1F949 /* ExpensesViewController.swift in Sources */,
 				FF914A6522D8FA2200D1F949 /* DayModel.swift in Sources */,
+				FFE4796522E8E90D00D3E468 /* ButtonCell.swift in Sources */,
 				FF2F22E322D6209100C91380 /* DayViewController.swift in Sources */,
 				FF914A6322D7C87C00D1F949 /* ProgressBarView.swift in Sources */,
 				FF93E2A022DCCD150094AA08 /* CustomCell.swift in Sources */,
 				FF2F22E122D6209100C91380 /* AppDelegate.swift in Sources */,
 				FF16298622E4095D002E1F5E /* DayPresenter.swift in Sources */,
 				FF015EF322DE1D730024D478 /* Constants.swift in Sources */,
+				FF2B384A22EA20E3005D5E20 /* customTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2N25GKBQX;
 				INFOPLIST_FILE = "Perfect Budget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,6 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2N25GKBQX;
 				INFOPLIST_FILE = "Perfect Budget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import os
 
 protocol DayView: class {
     func showProgress(progress: Float)
     func showDayOfWeek(day: String)
     func showSpendingValues(currSpend: Double, maxSpend: Double)
+    func showInputDialog()
 }
 
 protocol DayViewPresenter {
@@ -19,6 +21,7 @@ protocol DayViewPresenter {
     func setProgress()
     func setDayOfWeek()
     func setSpendingValues()
+    func showInputDialog()
     func addExpense(amount: Double, reason: String)
     func getExpenses() -> [Expense]
 }
@@ -52,4 +55,24 @@ class DayPresenter: DayViewPresenter {
     func getExpenses() -> [Expense] {
         return self.day.getExpenses()
     }
+
+    func showInputDialog() {
+        view.showInputDialog()
+    }
+
+    private func saveMeals() {
+        // let isSuccessfulSave = NSKeyedArchiver.archivedData(withRootObject: day, requiringSecureCoding: false)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(day, toFile: DayModel.ArchiveURL.path)
+
+        if isSuccessfulSave {
+            os_log("Meals successfully saved", log: OSLog.default, type: .debug)
+        }
+        else {
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+    }
+
+    // private func loadMeals() -> [DayModel] {
+    //     return NSKeyedUnarchiver.unarchivedObject(ofClasses: [DayModel], from: DayModel.ArchiveURL.path)
+    // }
 }
